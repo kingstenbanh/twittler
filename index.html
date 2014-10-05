@@ -11,6 +11,12 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <<style>
+    body {
+      padding-top: 50px;
+    }
+  </style>
 </head>
 <body>
   
@@ -53,7 +59,7 @@
       <!-- MAIN TWEETS -->
       <div class="col-md-8">
         <!-- TWEET DISPLAY -->
-        <div class="col-md-10">
+        <div class="col-md-10 tweet-display">
           
         </div> <!-- end tweet display -->
       </div> <!-- end main tweets -->
@@ -61,24 +67,23 @@
   </div> <!-- end container -->
 
 
-<!--     <script>
+  <script>
 
     $(document).ready(function(){
-      var $body = $('body');
-      $body.html('');
+      var $tweetDisplay = $('.tweet-display');
 
       var index = streams.home.length - 1;
       while(index >= 0){
         var tweet = streams.home[index];
         var $tweet = $('<div></div>');
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
-        $tweet.appendTo($body);
+        $tweet.appendTo($tweetDisplay);
         index -= 1;
       }
 
     });
 
-  </script> -->
+  </script>
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
