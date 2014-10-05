@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Kingsten | Twitter</title>
-    <meta name="description" content="Recreating Twitter">
-    <meta name="author" content="Kingsten Banh">
+<head>
+  <meta charset="utf-8">
+  <title>Kingsten | Twitter</title>
+  <meta name="description" content="Recreating Twitter">
+  <meta name="author" content="Kingsten Banh">
 
-    <script src="jquery.js"></script>
-    <script src="data_generator.js"></script>
+  <script src="jquery.js"></script>
+  <script src="data_generator.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  </head>
-  <body>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
   
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+    <div class="container">
+      <div class="nav-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#section-home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="#section-notifications"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
+            <li><a href="#section-discover"><span class="glyphicon glyphicon-globe"></span>Discover</a></li>
+            <li><a href="#section-me"><span class="glyphicon glyphicon-user"></span> Me</a></li>
+            <li><a href="#section-twitter-icon"><span class="glyphicon glyphicon-cloud"></span></a></li>
+            <li><a href="#section-search-twitter"><span class="glyphicon glyphicon-search"></span> Search Twitter</a></li>
+            <li><a href="#section-direct-messags"><span class="glyphicon glyphicon-envelope"></span> Direct Messages</a></li>
+            <li><a href="#section-settings"><span class="glyphicon glyphicon-cog"></span> Setting</a></li>
+            <li><a href="#section-new-tweet"><span class="glyphicon glyphicon-edit"></span> New Tweet</a></li>
+          </ul>
+        </div> <!-- end collapse -->
+      </div> <!-- end navbar-header -->
+    </div> <!-- end container -->
+  </nav>
+
+
 <!--     <script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+    $(document).ready(function(){
+      var $body = $('body');
+      $body.html('');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+      var index = streams.home.length - 1;
+      while(index >= 0){
+        var tweet = streams.home[index];
+        var $tweet = $('<div></div>');
+        $tweet.text('@' + tweet.user + ': ' + tweet.message);
+        $tweet.appendTo($body);
+        index -= 1;
+      }
 
-      });
+    });
 
-    </script> -->
+  </script> -->
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </body>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
 </html>
