@@ -68,7 +68,7 @@
             <div class="col-md-3">
               <form action="#" role="form">
                   <label for="subscribe-name" class="sr-only">Compose new Tweet...</label>
-                  <input type="text" class="form-control" id="new-tweet" placeholder="Compose new Tweet..">
+                  <input type="text" class="form-control" id="new-tweet" placeholder="Compose new Tweet...">
               </form>
             </div>
           </div>
@@ -159,25 +159,8 @@
   </div> <!-- end container -->
 
 
-  <script>
-
-    $(document).ready(function(){
-      var $tweetDisplay = $('.tweet-display');
-
-      var index = streams.home.length - 1;
-      while(index >= 0){
-        var tweet = streams.home[index];
-        var $tweet = $('<div></div>');
-        $tweet.text('@' + tweet.user + ': ' + tweet.message);
-        $tweet.appendTo($tweetDisplay);
-        index -= 1;
-      }
-
-    });
-
-  </script>
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
