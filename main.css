@@ -1,0 +1,100 @@
+/* ---------- GLOBAL STYLES ---------- */
+body {
+	background: #C0DEED url(bg.png) no-repeat fixed;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+	color: #66757f;
+	font-size: 22px;
+	font-weight: 200;
+	line-height: 22px;
+}
+
+h4 {
+	color: #66757f;
+	font-weight: 100;
+}
+
+a {
+	color: #0084B4;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+	background: #fff;
+}
+
+.glyphicon {
+	font-size: 20px;
+}
+
+
+
+
+/* ---------- PROFILE ---------- */
+#profile {
+	background: #fff;
+	border-radius: 6px;
+	width: 290px;
+	margin: 10px;
+}
+
+
+/* ---------- WHO TO FOLLOW ---------- */
+#who-to-follow {
+	background: #fff;
+	border-radius: 6px;
+	width: 290px;
+	margin: 10px;
+}
+
+
+
+/* ---------- TRENDS ---------- */
+#trends {
+	background: #fff;
+	border-radius: 6px;
+	width: 290px;
+	margin: 10px;
+}
+
+
+
+/* ---------- FOOTER ---------- */
+#footer {
+	background: #fff;
+	border-radius: 6px;
+	width: 290px;
+	margin: 10px;
+}
+
+
+/* ---------- MAIN TWEETS ---------- */
+#tweet-display {
+	background: #fff;
+	border-radius: 6px;
+	width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

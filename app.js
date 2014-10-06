@@ -14,7 +14,7 @@ var getRandomLetter = function () {
 
 $(document).ready(function(){
 
-  var $tweetDisplay = $('.tweet-display');
+  var $tweetDisplay = $('#tweet-display');
 
   var index = streams.home.length - 1;
 

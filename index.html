@@ -12,7 +12,7 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
+  <link rel="stylesheet" type="text/css" href="main.css">
   <style>
     body {
       padding-top: 60px;
@@ -23,7 +23,7 @@
   
   <!-- NAVBAR -->
   <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
-    <div class="container">
+    <div class="container col-lg-offset-1">
       <div class="nav-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -36,13 +36,13 @@
           <ul class="nav navbar-nav">
             <li><a href="#section-home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li><a href="#section-notifications"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-            <li><a href="#section-discover"><span class="glyphicon glyphicon-globe"></span>Discover</a></li>
+            <li><a href="#section-discover"><span class="glyphicon glyphicon-globe"></span> Discover</a></li>
             <li><a href="#section-me"><span class="glyphicon glyphicon-user"></span> Me</a></li>
             <li><a href="#section-twitter-icon"><span class="glyphicon glyphicon-cloud"></span></a></li>
             <li><a href="#section-search-twitter"><span class="glyphicon glyphicon-search"></span> Search Twitter</a></li>
-            <li><a href="#section-direct-messags"><span class="glyphicon glyphicon-envelope"></span> Direct Messages</a></li>
-            <li><a href="#section-settings"><span class="glyphicon glyphicon-cog"></span> Setting</a></li>
-            <li><a href="#section-new-tweet"><span class="glyphicon glyphicon-edit"></span> New Tweet</a></li>
+            <li><a href="#section-direct-messags"><span class="glyphicon glyphicon-envelope"></span></a></li>
+            <li><a href="#section-settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+            <li><a href="#section-new-tweet"><span class="glyphicon glyphicon-edit"></span></a></li>
           </ul>
         </div> <!-- end collapse -->
       </div> <!-- end navbar-header -->
@@ -55,8 +55,8 @@
       <!-- DASHBOARD -->
       <div class="col-md-4">
         <!-- PROFILE -->
-        <section id="profile">
-          <div class="container col-md-offset-3">
+        <section>
+          <div class="container col-md-offset-2" id="profile">
             <a href="#">Kingsten Banh</a><br>
             <a href="#"><small>@KingstenBanh</small></a><br><br>
 
@@ -65,20 +65,18 @@
               <li><a href="#"><small>FOLLOWING</small><br>76</a></li>
               <li><a href="#"><small>FOLLOWERS</small><br>42</a></li>
             </ul>
-
-            <div class="col-md-3">
-              <form action="#" role="form">
+            
+            <form action="#" role="form">
                   <label for="subscribe-name" class="sr-only">Compose new Tweet...</label>
                   <input type="text" class="form-control" id="new-tweet" placeholder="Compose new Tweet...">
-              </form>
-            </div>
+            </form>
           </div>
 
         </section>
 
         <!-- WHO TO FOLLOW -->
-        <section id="who-to-follow">
-          <div class="container col-md-offset-3">
+        <section>
+          <div class="container col-md-offset-3" id="who-to-follow">
             <h4>Who to follow <small>· <a href="#">Refresh</a> · <a href="#">View all</a></small></h4>
 
             <ul class="list-unstyled">
@@ -98,8 +96,8 @@
         </section>
 
         <!-- TRENDS -->
-        <section id="trends">
-          <div class="container-fluid col-md-offset-3">
+        <section>
+          <div class="container col-md-offset-2" id="trends">
             <h4>Trends <small>· <a href="#">Change</a></small></h3>
 
             <ul class="list-unstyled">
@@ -119,33 +117,38 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="col-md-offset-3">
-          <p>&copy; 2014 Kingsten Banh | Twittler</p>
+        <footer>
+          <div class="container col-sm-offset-2" id="footer">
+            <p>&copy; 2014 Kingsten Banh | Twittler</p>
 
-          <ul class="list-inline">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Cookies</a></li>
-            <li><a href="#">Ads info</a></li>
-            <li><a href="#">Brand</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Status</a></li>
-            <li><a href="#">Apps</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Developers</a></li>
-          </ul>
+            <ul class="list-inline">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Ads info</a></li>
+              <li><a href="#">Brand</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Status</a></li>
+              <li><a href="#">Apps</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Developers</a></li>
+            </ul>
+          </div>
+          
+
+          
         </footer>
       </div> <!-- end dashboard-->
 
       <!-- MAIN TWEETS -->
-      <div class="col-md-8">
+      <div class="container col-md-8">
         <!-- TWEET DISPLAY -->
-        <div class="col-md-10 tweet-display">
+        <div class="col-md-10" id="tweet-display">
           <h3>Tweets</h3>
 
           <div class="text-center" id="displayNewTweet">
