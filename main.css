@@ -34,7 +34,9 @@ img {
 	font-size: 20px;
 }
 
-
+.center-icon, .compose-tweet  {
+	color: #329bc2;
+}
 
 /* ---------- PROFILE ---------- */
 #profile {
@@ -44,10 +46,6 @@ img {
 	margin: 10px;
 	padding-top: 60px;
 }
-
-/*.stats li {
-	margin-top: 10px;
-}*/
 
 .form-control {
 	margin: 15px 0px;
