@@ -7,6 +7,8 @@
   <meta name="author" content="Kingsten Banh">
 
   <script src="jquery.js"></script>
+  <script src="moment.js"></script>
+  <script src="jquery.timeago.js"></script>
   <script src="data_generator.js"></script>
 
   <!-- Latest compiled and minified CSS -->
@@ -80,7 +82,7 @@
           <div class="container col-md-offset-3">
             <h4>Who to follow <small>· <a href="#">Refresh</a> · <a href="#">View all</a></small></h4>
 
-            <ul class="list-group">
+            <ul class="list-unstyled">
               <li><a href="#">Hack Reactor</a> @HackReactor</li>
               <li><a href="#">jQuery</a> @jquery </li>
               <li><a href="#">JavaScript Daily</a> @JavaScriptDaily </li>
@@ -98,10 +100,10 @@
 
         <!-- TRENDS -->
         <section id="trends">
-          <div class="container col-md-offset-3">
+          <div class="container-fluid col-md-offset-3">
             <h4>Trends <small>· <a href="#">Change</a></small></h3>
 
-            <ul class="list-group">
+            <ul class="list-unstyled">
                 <li><a href="#">Steve Jobs</a></li>
                 <li><a href="#">Ello</a></li>
                 <li><a href="#">Hack Reactor</a></li>
@@ -152,6 +154,7 @@
               <a href="#">View <span id="tweetCount">10</span> new Tweets</a>
             </ul>
           </div>
+          <hr>
         </div> <!-- end tweet display -->
       </div> <!-- end main tweets -->
     </div> <!-- end row -->
