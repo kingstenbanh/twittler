@@ -64,7 +64,7 @@ img {
 	background: #fff;
 	border-radius: 6px;
 	width: 290px;
-	margin: 10px;
+	margin: 10px 20px -1px 10px;
 	padding: 8px 15px;
 }
 
@@ -74,7 +74,6 @@ img {
 
 .modal-content {
 	width: 520px;
-	margin: auto auto;
 }
 
 
