@@ -13,7 +13,7 @@ h3 {
 
 h4 {
 	color: #66757f;
-	font-weight: 100;
+	font-weight: 200;
 }
 
 a {
@@ -23,6 +23,7 @@ a {
 img {
 	border-radius: 4px;
 }
+
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -52,6 +53,10 @@ img {
 	margin: 10px;
 }
 
+#who-to-follow a {
+	font-size: 13px;
+}
+
 
 
 /* ---------- TRENDS ---------- */
@@ -60,6 +65,16 @@ img {
 	border-radius: 6px;
 	width: 290px;
 	margin: 10px;
+	padding: 8px 15px;
+}
+
+#trends a {
+	font-size: 13px;
+}
+
+.modal-content {
+	width: 520px;
+	margin: auto auto;
 }
 
 
@@ -78,6 +93,8 @@ img {
 footer a, footer a:hover {
 	color: #8899a6;
 }
+
+
 
 /* ---------- MAIN TWEETS ---------- */
 #tweet-display {
