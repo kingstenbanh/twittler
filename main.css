@@ -20,6 +20,10 @@ a {
 	color: #0084B4;
 }
 
+img {
+	border-radius: 4px;
+}
+
 /* ---------- NAVBAR ---------- */
 .navbar {
 	background: #fff;
@@ -28,7 +32,6 @@ a {
 .glyphicon {
 	font-size: 20px;
 }
-
 
 
 
@@ -67,8 +70,14 @@ a {
 	border-radius: 6px;
 	width: 290px;
 	margin: 10px;
+	padding: 15px 15px 5px 15px;
+	font-size: 12px;
+	color: #8899a6;
 }
 
+footer a, footer a:hover {
+	color: #8899a6;
+}
 
 /* ---------- MAIN TWEETS ---------- */
 #tweet-display {
