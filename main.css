@@ -1,6 +1,6 @@
 /* ---------- GLOBAL STYLES ---------- */
 body {
-	background: #C0DEED url(bg.png) no-repeat fixed;
+	background: #C0DEED url(img/bg.png) no-repeat fixed;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -57,6 +57,9 @@ img {
 	font-size: 13px;
 }
 
+.follower-list [] {
+
+}
 
 
 /* ---------- TRENDS ---------- */
