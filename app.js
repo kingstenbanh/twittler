@@ -6,15 +6,23 @@ $(document).ready(function(){
 
   while(index >= 0){
     var tweet = streams.home[index];
-    var $tweet = $('<div class="container"></div>');
-    var $handler = $('<a href="#" class=' + tweet.user + '>' + '@' + tweet.user + '</a>' + '<span> · </span>');
-    var $timeStamp = $('<span>a second ago</span>' + '<br>');
+    var $tweetDiv = $('' +
+      '<div class="container-fluid">' + 
+        '<div class="row">' +
+          '<div class="col-md-2">' + 
+            '<img src="http://dummyimage.com/73x73/' + 
+            getRandomColor() + '/' + getRandomColor() + '&amp;text=' + getRandomLetter() + '">' +
+          '</div>' +
+          '<div class="col-md-10">' +
+            '<a href="#" class=' + tweet.user + '>@' + tweet.user + '</a><span> · </span>' +
+            '<span class="time-stamp">' + 'a second ago' + '</span>' +
+            '<p class="tweet-message">' + tweet.message + '</p>' +
+          '</div>' +
+        '</div>' + 
+        '<hr>' +
+      '</div>');
     
-    $tweet.text(tweet.message);
-    
-    $timeStamp.prependTo($tweet);
-    $handler.prependTo($tweet);
-    $tweet.appendTo($tweetDisplay);
+    $tweetDiv.appendTo($tweetDisplay);
     index -= 1;
   }
 });
