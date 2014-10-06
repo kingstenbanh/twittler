@@ -1,3 +1,17 @@
+var getRandomColor = function () {
+  var letters = '0123456789ABCDEF'.split('');
+  var color = "";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+var getRandomLetter = function () {
+  return String.fromCharCode(Math.floor(Math.random() * 25 + 65));
+}
+
+
 $(document).ready(function(){
 
   var $tweetDisplay = $('.tweet-display');
@@ -15,7 +29,7 @@ $(document).ready(function(){
           '</div>' +
           '<div class="col-md-10">' +
             '<a href="#" class=' + tweet.user + '>@' + tweet.user + '</a><span> · </span>' +
-            '<span class="time-stamp">' + 'a second ago' + '</span>' +
+            '<span class="time-stamp">' + jQuery.timeago(tweet.created_at) + '</span>' +
             '<p class="tweet-message">' + tweet.message + '</p>' +
           '</div>' +
         '</div>' + 
@@ -26,16 +40,3 @@ $(document).ready(function(){
     index -= 1;
   }
 });
-
-var getRandomColor = function () {
-  var letters = '0123456789ABCDEF'.split('');
-  var color = "";
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-var getRandomLetter = function () {
-  return String.fromCharCode(Math.floor(Math.random() * 25 + 65));
-}
