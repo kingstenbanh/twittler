@@ -21,12 +21,8 @@ var displayTweets = function (userName) {
   var index = userName ? streams.users[userName].length - 1 : $tweets.length - 1;
 
   while(index >= 0){
-    if (userName) {
-      var tweet = streams.users[userName][index];
-    } else {
-      var tweet = $tweets[index];
-    }
-    var tweet = $tweets[index];
+    var tweet = userName ? streams.users[userName][index] : $tweets[index];
+
     var $tweetDiv = $('' +
       '<div class="container-fluid singleTweet">' + 
         '<div class="row">' +
@@ -34,7 +30,7 @@ var displayTweets = function (userName) {
             '<img src="http://dummyimage.com/73x73/' + 
             getRandomColor() + '/' + getRandomColor() + '&amp;text=' + getRandomLetter() + '">' +
           '</div>' +
-          '<div class="col-md-10 userName">' +
+          '<div class="col-md-10">' +
             '<a href="#" class=' + tweet.user + '>@' + tweet.user + '</a><span> · </span>' +
             '<span class="time-stamp">' + moment(tweet.created_at).fromNow() + '</span>' +
             '<p class="tweet-message">' + tweet.message + '</p>' +
@@ -79,6 +75,22 @@ $(document).ready(function(){
     autoShowTweets();
   });
 
+  // Show user
+  $('#tweetDisplay').on('click', 'a', function() {
+    $('.singleTweet').remove();
+    var user = this.getAttribute('class');
+
+    // $('.userName').text('@' + user);
+    // $('.profile-avatar').attr('src', 'http://dummyimage.com/73x73/'
+    //         + getRandomColor() + '/' + getRandomColor() + '&text=' + getRandomLetter());
+    // $('.profile-avator').attr('alt', user + 'Avatar');
+    // $('.tweetsNum').text(getRandomNumber());
+    // $('.followingNum').text(getRandomNumber());
+    // $('.followersNum').text(getRandomNumber());
+    
+    displayTweets(user);
+  });
+  
 });
 
 
