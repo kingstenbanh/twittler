@@ -73,24 +73,17 @@ $(document).ready(function(){
     $('title').text('Kingsten | Twitter');
     clearInterval(newTimer);
     autoShowTweets();
+    $('.title').text("Tweets");
   });
 
   // Show user
   $('#tweetDisplay').on('click', 'a', function() {
     $('.singleTweet').remove();
     var user = this.getAttribute('class');
-
-    // $('.userName').text('@' + user);
-    // $('.profile-avatar').attr('src', 'http://dummyimage.com/73x73/'
-    //         + getRandomColor() + '/' + getRandomColor() + '&text=' + getRandomLetter());
-    // $('.profile-avator').attr('alt', user + 'Avatar');
-    // $('.tweetsNum').text(getRandomNumber());
-    // $('.followingNum').text(getRandomNumber());
-    // $('.followersNum').text(getRandomNumber());
-    
     displayTweets(user);
+    $('.title').text(user + "'s Tweets");
   });
-  
+
 });
 
 
