@@ -49,8 +49,26 @@ var displayTweets = function (userName) {
   count = streams.home.length - 1;
 };
 
+// Automatically generate tweets every 4 seconds
+var newTimer;
+
+var autoShowTweets = function() {
+  newTimer = setInterval(function() {
+    var countCheck = streams.home.length - 1;
+    if (countCheck > count) {
+      var numTweets = countCheck - count;
+      $('#tweetCount').text('View ' + numTweets + ' new Tweets');
+      $('title').text('Kingsten | (' + numTweets + ') Twitter');
+      $('#displayNewTweet').fadeIn();
+    }
+  }, 4000);
+}
+
 $(document).ready(function(){
 
   displayTweets();
+  autoShowTweets();
 
 });
+
+
