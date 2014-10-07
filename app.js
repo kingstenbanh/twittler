@@ -76,14 +76,40 @@ $(document).ready(function(){
     $('.title').text("Tweets");
   });
 
-  // Show user
-  $('#tweetDisplay').on('click', 'a', function() {
-    $('.singleTweet').remove();
-    var user = this.getAttribute('class');
-    displayTweets(user);
-    $('.title').text(user + "'s Tweets");
-  });
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
