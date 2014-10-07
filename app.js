@@ -11,25 +11,32 @@ var getRandomLetter = function () {
   return String.fromCharCode(Math.floor(Math.random() * 25 + 65));
 }
 
+// Adding tweet one by one to DOM 
+var count = streams.home.length - 1;
 
-$(document).ready(function(){
+var displayTweets = function (userName) {
 
-  var $tweetDisplay = $('#tweet-display');
-
-  var index = streams.home.length - 1;
+  var $tweetDisplay = $('#tweetDisplay');
+  var $tweets = streams.home;
+  var index = userName ? streams.users[userName].length - 1 : $tweets.length - 1;
 
   while(index >= 0){
-    var tweet = streams.home[index];
+    if (userName) {
+      var tweet = streams.users[userName][index];
+    } else {
+      var tweet = $tweets[index];
+    }
+    var tweet = $tweets[index];
     var $tweetDiv = $('' +
-      '<div class="container-fluid">' + 
+      '<div class="container-fluid singleTweet">' + 
         '<div class="row">' +
           '<div class="col-md-2">' + 
             '<img src="http://dummyimage.com/73x73/' + 
             getRandomColor() + '/' + getRandomColor() + '&amp;text=' + getRandomLetter() + '">' +
           '</div>' +
-          '<div class="col-md-10">' +
+          '<div class="col-md-10 userName">' +
             '<a href="#" class=' + tweet.user + '>@' + tweet.user + '</a><span> · </span>' +
-            '<span class="time-stamp">' + jQuery.timeago(tweet.created_at) + '</span>' +
+            '<span class="time-stamp">' + moment(tweet.created_at).fromNow() + '</span>' +
             '<p class="tweet-message">' + tweet.message + '</p>' +
           '</div>' +
         '</div>' + 
@@ -39,4 +46,11 @@ $(document).ready(function(){
     $tweetDiv.appendTo($tweetDisplay);
     index -= 1;
   }
+  count = streams.home.length - 1;
+};
+
+$(document).ready(function(){
+
+  displayTweets();
+
 });

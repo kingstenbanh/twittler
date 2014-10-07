@@ -7,7 +7,7 @@
   <meta name="author" content="Kingsten Banh">
 
   <script src="jquery.js"></script>
-  <script src="jquery.timeago.js"></script>
+  <script src="moment.js"></script>
   <script src="data_generator.js"></script>
 
   <!-- Latest compiled and minified CSS -->
@@ -58,7 +58,7 @@
         <section>
           <div class="container col-md-offset-2" id="profile">
             <img src="http://dummyimage.com/73x73/ffac33/fff&amp;text=K" alt="Kingsten Avatar">
-            <a href="#" class="userName">Kingsten Banh</a><br>
+            <a href="#" id="userName">Kingsten Banh</a><br>
 
             <ul class="list-inline">
               <li><a href="#"><small>TWEETS</small><br>128</a></li>
@@ -172,6 +172,10 @@
             </ul>
           </div>
           <hr>
+
+          <section id="tweetDisplay">
+            
+          </section>
         </div> <!-- end tweet display -->
       </div> <!-- end main tweets -->
     </div> <!-- end row -->

@@ -1,5 +1,6 @@
 /* ---------- GLOBAL STYLES ---------- */
 body {
+	padding: 60px;
 	background: #C0DEED url(img/bg.png) no-repeat fixed;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -54,7 +55,8 @@ img {
 #profile img {
 	border: 2px solid #fff;
 }
-.userName {
+
+#userName {
 	font-size: 18px;
 	font-weight: bold;
 	color: #292f42;
