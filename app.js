@@ -69,6 +69,16 @@ $(document).ready(function(){
   displayTweets();
   autoShowTweets();
 
+  $('#showNewTweets').on('click', function(event) {
+    event.preventDefault();
+    $('.singleTweet').remove();
+    displayTweets();
+    $('#displayNewTweet').slideUp();
+    $('title').text('Kingsten | Twitter');
+    clearInterval(newTimer);
+    autoShowTweets();
+  });
+
 });
 
 
